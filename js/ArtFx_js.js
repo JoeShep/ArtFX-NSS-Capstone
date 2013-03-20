@@ -1,4 +1,4 @@
-// $(document).ready(function () {
+
 	var channel_max = 20;										// number of channels
 	audiochannels = new Array();
 	for (a=0;a<channel_max;a++) {									// prepare the channels
@@ -18,18 +18,53 @@
 			}
 		}
 	};
-		
-	// <audio id="multiaudio1" src="https://artfx-14my8.backliftapp.com/audio/rain-umbrella.mp3" preload="auto"></audio>
-	// <audio id="multiaudio2" src="audio/footsteps-dress-shoes.aif" preload="auto"></audio>
-	// <audio id="multiaudio3" src="audio/magic4.wav" preload="auto"></audio>
+$(document).ready(function () {
+    //mapster plugin commands to highlight mapped/clickable areas in images
+    $('img').mapster(
+    {
+        fillOpacity: 0.1,
+        fillColor: "FFFFFF",
+        stroke: true,
+        strokeColor: "805239",
+        strokeOpacity: 0.8,
+        strokeWidth: 4,
+        singleSelect: false,
+        clickNavigate: true
+    });
+
+    // $('#paris').mapster(
+    // {
+    //     fillOpacity: 0.1,
+    //     fillColor: "ffffff",
+    //     stroke: true,
+    //     strokeColor: "805239",
+    //     strokeOpacity: 0.8,
+    //     strokeWidth: 4,
+    //     singleSelect: false,
+    // });
+
+ $(".main").click(function(){
+    $(".maps").hide();
+    $('#myModal').modal();
+    var sliderpic = $(this).attr('id');
+    switch(sliderpic) {
+        case "parisSlider":
+            $("#parisMap").show();
+            break;
+        case "starrySlider":
+            $("#starryMap").show();
+            break;
+        case "tigerSlider":
+            $("#tigerMap").show();
+            break;
+        case "sundaySlider":
+            $("#sundayMap").show();
+    }
+ }); //end modal launch click
 
 
-	// <a href="javascript:play_multi_sound('multiaudio1');">Breaking Plate</a><br />
-	// <a href="javascript:play_multi_sound('multiaudio2');">Footsteps</a><br />
-	// <a href="javascript:play_multi_sound('multiaudio3');">Magic!</a><br />
-    
+}); //end document ready
 
-		// $(a).mouseover(function(){
-		// 	play_multi_sound();
-		// });
-//}); //end document ready
+
+
+
