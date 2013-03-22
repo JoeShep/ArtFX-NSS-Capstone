@@ -18,7 +18,7 @@ An interactive app for kids that encourages exploration of great paintings. This
 	<li>Add highlighting around mapped areas when moused over. DONE</li>
 	<li>Play sound files when mapped areas are clicked. IN PROGRESS 
 		<ul>
-			<li>Sound files are currently in local folder. Need to migrate to a server for public functionality</li>
+			<li>Sound files are currently in local folder. Need to migrate to a server for public functionality DONE</li>
 			<li>Need to tweak timing of some sounds to make longer or shorter</li>
 		</ul></li>
 	<li>Display images of the paintings in a slider. DONE</li>
