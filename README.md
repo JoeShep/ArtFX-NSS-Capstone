@@ -3,6 +3,8 @@ ArtFX-NSS-Capstone
 
 An interactive app for kids that encourages exploration of great paintings. This is my capstone project for the first semester of Nashville Software School, cohort 2.
 
+<p>For insight into the use of the images included in this project, please read the following article that explains how the "slavish" reproductions I am using are not bound by copyright: http://www.huffingtonpost.com/bernard-starr/museum-paintings-copyright_b_1867076.html</p>
+
 <html>
 <h3>Phase one, to be completed by March 27, 2013: </h3>
 <ul>
