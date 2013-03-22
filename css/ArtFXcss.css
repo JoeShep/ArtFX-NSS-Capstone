@@ -1,0 +1,42 @@
+#mainpage {
+	/*background: url(../img/SummerSky.jpg);*/
+}
+#content {
+	background-color: white;
+	/*margin: 0 auto;*/
+}
+#myModal .modal-body {
+	max-height: 725px;
+	text-align: center;
+	background-image: url(../img/White2.gif);
+}
+#myModal {
+	width: 850px; /* SET THE WIDTH OF THE MODAL */
+	margin: -75px 0 0 -425px; /* CHANGE MARGINS TO ACCOMODATE THE NEW WIDTH (original = margin: -250px 0 0 -280px;) */
+}
+.modal-footer {
+	background-image: url(../img/footer2.jpg);
+
+}
+.modal-header {
+	background-image: url(../img/header2.jpg);
+
+}
+#logo {
+    background-image: url(../img/Gogh-Starry-Night.jpg);
+    background-color: #000000;
+    width: 850px;
+    height: 400px;
+    position: absolute;
+  }
+  .dwuserEasyRotator {
+  	width: 600px; 
+  	height: 500px; 
+  	position:relative; 
+  	top: 350px;
+  	text-align: left;
+  	border: 5px solid black;
+  }
+ .maps {
+ position: relative;
+ }
