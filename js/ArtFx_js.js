@@ -1,24 +1,20 @@
 
-	var channel_max = 20;										// number of channels
-	audiochannels = new Array();
-	for (a=0;a<channel_max;a++) {									// prepare the channels
-		audiochannels[a] = new Array();
-		audiochannels[a]['channel'] = new Audio();						// create a new audio object
-		audiochannels[a]['finished'] = -1;							// expected end time for this channel
-	}
-	function play_multi_sound(s) {
-		for (a=0;a<audiochannels.length;a++) {
-			thistime = new Date();
-			if (audiochannels[a]['finished'] < thistime.getTime()) {			// is this channel finished?
-				audiochannels[a]['finished'] = thistime.getTime() + document.getElementById(s).duration*1000;
-				audiochannels[a]['channel'].src = document.getElementById(s).src;
-				audiochannels[a]['channel'].load();
-				audiochannels[a]['channel'].play();
-				break;
-			}
-		}
-	};
+
+
+
 $(document).ready(function () {
+
+     var channel_max = 20;                                       // number of channels
+        audiochannels = new Array();
+        for (a=0;a<channel_max;a++) {                                   // prepare the channels
+        audiochannels[a] = new Array();
+        audiochannels[a]['channel'] = new Audio();                      // create a new audio object
+        audiochannels[a]['finished'] = -1;                          // expected end time for this channel
+    }
+
+
+       
+
     //mapster plugin commands to highlight mapped/clickable areas in images
     $('img').mapster(
     {
@@ -62,8 +58,32 @@ $(document).ready(function () {
     }
  }); //end modal launch click
 
+    $(".close").click(function() {
+    for (i=0; i<audiochannels.length; i++) {
+    audiochannels[i]['channel'].pause();
+}
+  
+}); //end close modal click
+
+//launch sound effect playback
+    $("area").click(function(){
+    play_multi_sound($(this).attr("audio"));
+}); //end click
 
 }); //end document ready
+
+function play_multi_sound(s) {
+        for (a=0;a<audiochannels.length;a++) {
+            thistime = new Date();
+            if (audiochannels[a]['finished'] < thistime.getTime()) {            // is this channel finished?
+                audiochannels[a]['finished'] = thistime.getTime() + document.getElementById(s).duration*1000;
+                audiochannels[a]['channel'].src = document.getElementById(s).src;
+                audiochannels[a]['channel'].load();
+                audiochannels[a]['channel'].play();
+                break;
+            }
+        }
+    };
 
 
 
