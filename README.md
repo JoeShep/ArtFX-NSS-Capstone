@@ -26,7 +26,7 @@ An interactive app for kids that encourages exploration of great paintings. This
 	<li>Add text on index page to explain app and how to play. NOT STARTED</li>
 	<li>Add dynamically generated text prompts in modal to guide user to click on hotspots. NOT STARTED</li>
 	<li>Add dynamically generated animated check boxes to chart each sound when it is triggered as well as "success" messages when all the sounds are triggered for an image. NOT STARTED</li>
-	<li>Fade out/stop sounds when modal window is closed NOT STARTED</li>
+	<li>Fade out/stop sounds when modal window is closed DONE</li>
 	<li>Add ability to ask for and store user's name NOT STARTED</li>
 	<li> Insert user's name into text prompts and success messages NOT STARTED</li>
 </ul><br>
