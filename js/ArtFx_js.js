@@ -14,9 +14,6 @@ $(document).ready(function () {
         fillOpacity: 0.2,
         fillColor: "FFFFFF",
         stroke: false,
-        strokeColor: "805239",
-        strokeOpacity: 0.9,
-        strokeWidth: 4,
         singleSelect: false,
         clickNavigate: true
     });
@@ -93,7 +90,12 @@ $(".tabBTN").click(function(){
 //launch sound effect playback
     $("area").click(function(){
     play_multi_sound($(this).data("audio"));
+    addCheckbox($(this).data('class'));
 }); //end click
+
+function addCheckbox(X){
+    $("#" + X).append("<img id='checkbox' src='img/icon_checkbox.gif'>");
+    }
 
 $("#myModal").on("shown", function() {
     animateCluesRight(); 
@@ -114,11 +116,11 @@ function resetAnimation(){
   };  
 
     function animateCluesLeft(clue1,clue2,clue3,clue4,clue5){
-    $("#tab1").stop().animate( {"left": "-420px"}).delay(500).animate({"left": "-315px"}).html(clue1);  
-    $("#tab2").stop().animate( {"left": "-470px"}).delay(500).animate({"left": "-365px"}).html(clue2);
-    $("#tab3").stop().animate( {"left": "-520px"}).delay(500).animate({"left": "-415px"}).html(clue3);
-    $("#tab4").stop().animate( {"left": "-570px"}).delay(500).animate({"left": "-465px"}).html(clue4);
-    $("#tab5").stop().animate( {"left": "-620px"}).delay(500).animate({"left": "-515px"}).html(clue5);
+    $("#tab1").stop().animate( {"left": "-420px"}).delay(500).animate({"left": "-315px"}).html(clue1 + "  ");  
+    $("#tab2").stop().animate( {"left": "-470px"}).delay(500).animate({"left": "-365px"}).html(clue2 + "  ");
+    $("#tab3").stop().animate( {"left": "-520px"}).delay(500).animate({"left": "-415px"}).html(clue3 + "  ");
+    $("#tab4").stop().animate( {"left": "-570px"}).delay(500).animate({"left": "-465px"}).html(clue4 + "  ");
+    $("#tab5").stop().animate( {"left": "-620px"}).delay(500).animate({"left": "-515px"}).html(clue5 + "  ");
     $("#tab6").stop().animate( {"left": "-170px"}, function() {
     $("ul").css("z-index", "0");
     $("li p").css({
