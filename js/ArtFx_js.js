@@ -1,9 +1,5 @@
 
-
-
-
 $(document).ready(function () {
-
      var channel_max = 20;                                       // number of channels
         audiochannels = new Array();
         for (a=0;a<channel_max;a++) {                                   // prepare the channels
@@ -12,32 +8,18 @@ $(document).ready(function () {
         audiochannels[a]['finished'] = -1;                          // expected end time for this channel
     }
 
-
-       
-
     //mapster plugin commands to highlight mapped/clickable areas in images
     $('img').mapster(
     {
-        fillOpacity: 0.1,
+        fillOpacity: 0.2,
         fillColor: "FFFFFF",
-        stroke: true,
+        stroke: false,
         strokeColor: "805239",
-        strokeOpacity: 0.8,
+        strokeOpacity: 0.9,
         strokeWidth: 4,
         singleSelect: false,
         clickNavigate: true
     });
-
-    // $('#paris').mapster(
-    // {
-    //     fillOpacity: 0.1,
-    //     fillColor: "ffffff",
-    //     stroke: true,
-    //     strokeColor: "805239",
-    //     strokeOpacity: 0.8,
-    //     strokeWidth: 4,
-    //     singleSelect: false,
-    // });
 
  $(".main").click(function(){
     $(".maps").hide();
@@ -46,29 +28,107 @@ $(document).ready(function () {
     switch(sliderpic) {
         case "parisSlider":
             $("#parisMap").show();
+            $("#tab1").html("Rain on an umbrella");
+            $("#tab2").html("Rain on the street");
+            $("#tab3").html("A clattering carriage");
+            $("#tab4").html("Footsteps on the cobblestones");
+            $("#tab5").html("A horse that doesn't like the rain");
+            $(".tabBTN").attr("id", "parisBTN");
             break;
         case "starrySlider":
             $("#starryMap").show();
+            $("#tab1").html("The swirling wind");
+            $("#tab2").html("Crickets chirping in the hills");
+            $("#tab3").html("A nightingale hidden in a tree");
+            $("#tab4").html("Church bells chiming");
+            $("#tab5").html("A home filled with music");
+            $(".tabBTN").attr("id", "starryBTN");
             break;
         case "tigerSlider":
             $("#tigerMap").show();
+            $("#tab1").html("Rain pouring down");
+            $("#tab2").html("Thunder and lightning");
+            $("#tab3").html("Wind whistling in the grass");
+            $("#tab4").html("Jungle creatures in the trees");
+            $("#tab5").html("The growls of the frightened tiger");
+            $(".tabBTN").attr("id", "tigerBTN");
             break;
         case "sundaySlider":
             $("#sundayMap").show();
+            $("#tab1").html("The happy crowd");
+            $("#tab2").html("Kids playing in the park");
+            $("#tab3").html("Water lapping the shore");
+            $("#tab4").html("A man playing his horn");
+            $("#tab5").html("A yappy little dog");
+            $(".tabBTN").attr("id", "sundayBTN");
     }
  }); //end modal launch click
 
+$(".tabBTN").click(function(){
+    switch($(this).attr('id')){
+        case "parisBTN":
+            animateCluesLeft("umbrella","street","carriage","shoes","horse");
+            break;
+        case "starryBTN":
+            animateCluesLeft("wind","crickets","nightingale","bells","music");
+            break;
+        case "tigerBTN":
+            animateCluesLeft("rain","thunder","wind","jungle","tiger");
+            break;
+        case "sundayBTN":
+            animateCluesLeft("crowd","kids","water","horn","dog");
+            break;
+    }
+ });
+    
+
     $(".close").click(function() {
+    resetAnimation();
     for (i=0; i<audiochannels.length; i++) {
     audiochannels[i]['channel'].pause();
-}
-  
+    $("#clues").css("z-index", "9999");
+    }
 }); //end close modal click
 
 //launch sound effect playback
     $("area").click(function(){
-    play_multi_sound($(this).attr("audio"));
+    play_multi_sound($(this).data("audio"));
 }); //end click
+
+$("#myModal").on("shown", function() {
+    animateCluesRight(); 
+}); //end shown function
+
+function resetAnimation(){
+ $(".tabs").stop().css({"left":"", "font-size": "", "text-transform":"", "padding":""}).html("");
+ $("#tab6").css("left","");
+};
+ 
+ function animateCluesRight(){
+ $("#tab1").stop().delay(1000).animate( {"left":"0px"}, 300);
+ $("#tab2").stop().delay(2000).animate( {"left":"0px"}, 300);
+ $("#tab3").stop().delay(3000).animate( {"left":"0px"}, 300);
+ $("#tab4").stop().delay(4000).animate( {"left":"0px"}, 300);
+ $("#tab5").stop().delay(5000).animate( {"left":"0px"}, 300);
+ $("#tab6").stop().delay(6000).animate( {"left":"0px"}, 300);
+  };  
+
+    function animateCluesLeft(clue1,clue2,clue3,clue4,clue5){
+    $("#tab1").stop().animate( {"left": "-420px"}).delay(500).animate({"left": "-315px"}).html(clue1);  
+    $("#tab2").stop().animate( {"left": "-470px"}).delay(500).animate({"left": "-365px"}).html(clue2);
+    $("#tab3").stop().animate( {"left": "-520px"}).delay(500).animate({"left": "-415px"}).html(clue3);
+    $("#tab4").stop().animate( {"left": "-570px"}).delay(500).animate({"left": "-465px"}).html(clue4);
+    $("#tab5").stop().animate( {"left": "-620px"}).delay(500).animate({"left": "-515px"}).html(clue5);
+    $("#tab6").stop().animate( {"left": "-170px"}, function() {
+    $("ul").css("z-index", "0");
+    $("li p").css({
+        "font-size":"50%", 
+        "text-transform":"uppercase",
+        "padding": "15px 10px"
+    });
+  });
+};
+
 
 }); //end document ready
 
@@ -84,6 +144,8 @@ function play_multi_sound(s) {
             }
         }
     };
+
+
 
 
 
