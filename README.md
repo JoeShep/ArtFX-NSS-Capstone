@@ -19,11 +19,11 @@ An interactive app for kids that encourages exploration of great paintings. This
 	<li>Play sound files when mapped areas are clicked. IN PROGRESS 
 		<ul>
 			<li>Sound files are currently in local folder. Need to migrate to a server for public functionality MOVE TO PHASE 2</li>
-			<li>Need to tweak timing of some sounds to make longer or shorter</li>
+			<li>Need to tweak timing of some sounds to make longer or shorter</li>MOVE TO PHASE 2
 		</ul></li>
 	<li>Display images of the paintings in a slider. DONE</li>
 	<li>Add ability to display image maps when corresponding image is clicked on in the slider. DONE</li>
-	<li>Add text on index page to explain app and how to play. IN PROGRESS</li>
+	<li>Add text on index page to explain app and how to play. DONE</li>
 	<li>Add dynamically generated text prompts in modal to guide user to click on hotspots. DONE</li>
 	<li>Add dynamically generated animated check boxes to chart each sound when it is triggered as well as "success" messages when all the sounds are triggered for an image. NOT STARTED</li>
 	<li>Fade out/stop sounds when modal window is closed DONE</li>
