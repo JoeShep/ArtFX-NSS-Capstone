@@ -2,7 +2,7 @@ ArtFX-NSS-Capstone
 ==================
 
 An interactive app for kids that encourages exploration of great paintings. This is my capstone project for the first semester of Nashville Software School, cohort 2.
-<p>Try this code out at https://artfx-14my8.backliftapp.com/</p>
+
 <p>For insight into the use of the images included in this project, please read the following article that explains how the "slavish" reproductions I am using are not bound by copyright: http://www.huffingtonpost.com/bernard-starr/museum-paintings-copyright_b_1867076.html</p>
 
 <html>
@@ -18,17 +18,17 @@ An interactive app for kids that encourages exploration of great paintings. This
 	<li>Add highlighting around mapped areas when moused over. DONE</li>
 	<li>Play sound files when mapped areas are clicked. IN PROGRESS 
 		<ul>
-			<li>Sound files are currently in local folder. Need to migrate to a server for public functionality DONE</li>
+			<li>Sound files are currently in local folder. Need to migrate to a server for public functionality MOVE TO PHASE 2</li>
 			<li>Need to tweak timing of some sounds to make longer or shorter</li>
 		</ul></li>
 	<li>Display images of the paintings in a slider. DONE</li>
 	<li>Add ability to display image maps when corresponding image is clicked on in the slider. DONE</li>
-	<li>Add text on index page to explain app and how to play. NOT STARTED</li>
-	<li>Add dynamically generated text prompts in modal to guide user to click on hotspots. NOT STARTED</li>
+	<li>Add text on index page to explain app and how to play. IN PROGRESS</li>
+	<li>Add dynamically generated text prompts in modal to guide user to click on hotspots. DONE</li>
 	<li>Add dynamically generated animated check boxes to chart each sound when it is triggered as well as "success" messages when all the sounds are triggered for an image. NOT STARTED</li>
-	<li>Fade out/stop sounds when modal window is closed NOT STARTED</li>
-	<li>Add ability to ask for and store user's name NOT STARTED</li>
-	<li> Insert user's name into text prompts and success messages NOT STARTED</li>
+	<li>Fade out/stop sounds when modal window is closed DONE</li>
+	<li>Add ability to ask for and store user's name MOVE TO PHASE 2</li>
+	<li> Insert user's name into text prompts and success messages MOVE TO PHASE 2</li>
 </ul><br>
 <h3>Phase two: </h3>
 <ul>
