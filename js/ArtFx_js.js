@@ -11,26 +11,15 @@ $(document).ready(function () {
     //mapster plugin commands to highlight mapped/clickable areas in images
     $('img').mapster(
     {
-        fillOpacity: 0.1,
+        fillOpacity: 0.2,
         fillColor: "FFFFFF",
-        stroke: true,
+        stroke: false,
         strokeColor: "805239",
-        strokeOpacity: 0.8,
+        strokeOpacity: 0.9,
         strokeWidth: 4,
         singleSelect: false,
         clickNavigate: true
     });
-
-    // $('#paris').mapster(
-    // {
-    //     fillOpacity: 0.1,
-    //     fillColor: "ffffff",
-    //     stroke: true,
-    //     strokeColor: "805239",
-    //     strokeOpacity: 0.8,
-    //     strokeWidth: 4,
-    //     singleSelect: false,
-    // });
 
  $(".main").click(function(){
     $(".maps").hide();
@@ -44,6 +33,7 @@ $(document).ready(function () {
             $("#tab3").html("A clattering carriage");
             $("#tab4").html("Footsteps on the cobblestones");
             $("#tab5").html("A horse that doesn't like the rain");
+            $(".tabBTN").attr("id", "parisBTN");
             break;
         case "starrySlider":
             $("#starryMap").show();
@@ -52,6 +42,7 @@ $(document).ready(function () {
             $("#tab3").html("A nightingale hidden in a tree");
             $("#tab4").html("Church bells chiming");
             $("#tab5").html("A home filled with music");
+            $(".tabBTN").attr("id", "starryBTN");
             break;
         case "tigerSlider":
             $("#tigerMap").show();
@@ -60,6 +51,7 @@ $(document).ready(function () {
             $("#tab3").html("Wind whistling in the grass");
             $("#tab4").html("Jungle creatures in the trees");
             $("#tab5").html("The growls of the frightened tiger");
+            $(".tabBTN").attr("id", "tigerBTN");
             break;
         case "sundaySlider":
             $("#sundayMap").show();
@@ -68,14 +60,33 @@ $(document).ready(function () {
             $("#tab3").html("Water lapping the shore");
             $("#tab4").html("A man playing his horn");
             $("#tab5").html("A yappy little dog");
+            $(".tabBTN").attr("id", "sundayBTN");
     }
  }); //end modal launch click
+
+$(".tabBTN").click(function(){
+    switch($(this).attr('id')){
+        case "parisBTN":
+            animateCluesLeft("umbrella","street","carriage","shoes","horse");
+            break;
+        case "starryBTN":
+            animateCluesLeft("wind","crickets","nightingale","bells","music");
+            break;
+        case "tigerBTN":
+            animateCluesLeft("rain","thunder","wind","jungle","tiger");
+            break;
+        case "sundayBTN":
+            animateCluesLeft("crowd","kids","water","horn","dog");
+            break;
+    }
+ });
+    
 
     $(".close").click(function() {
     resetAnimation();
     for (i=0; i<audiochannels.length; i++) {
     audiochannels[i]['channel'].pause();
-    $("ul").css("z-index", "9999");
+    $("#clues").css("z-index", "9999");
     }
 }); //end close modal click
 
@@ -85,44 +96,41 @@ $(document).ready(function () {
 }); //end click
 
 $("#myModal").on("shown", function() {
-    animateClues(); 
+    animateCluesRight(); 
 }); //end shown function
 
 function resetAnimation(){
  $(".tabs").stop().css({"left":"", "font-size": "", "text-transform":"", "padding":""}).html("");
- $("#tab6").append("<button class='btn btn-primary' type='button'>" +'Ready!'+"</button>");
+ $("#tab6").css("left","");
 };
  
- function animateClues(){
- $("#tab1").stop().animate( {"left":"0px"}, 300);
- $("#tab2").stop().delay(1300).animate( {"left":"0px"}, 300);
- $("#tab3").stop().delay(2600).animate( {"left":"0px"}, 300);
- $("#tab4").stop().delay(3900).animate( {"left":"0px"}, 300);
- $("#tab5").stop().delay(5200).animate( {"left":"0px"}, 300);
- $("#tab6").stop().delay(6500).animate( {"left":"0px"}, 300);
-  };
+ function animateCluesRight(){
+ $("#tab1").stop().delay(1000).animate( {"left":"0px"}, 300);
+ $("#tab2").stop().delay(2000).animate( {"left":"0px"}, 300);
+ $("#tab3").stop().delay(3000).animate( {"left":"0px"}, 300);
+ $("#tab4").stop().delay(4000).animate( {"left":"0px"}, 300);
+ $("#tab5").stop().delay(5000).animate( {"left":"0px"}, 300);
+ $("#tab6").stop().delay(6000).animate( {"left":"0px"}, 300);
+  };  
 
-$("#tab6").click(function(){
-    $("#tab1").stop().animate( {"left": "-400px"}).delay(500).animate({"left": "-320px"}).html("umbrella");  
-    $("#tab2").stop().animate( {"left": "-450px"});  
-    $("#tab3").stop().animate( {"left": "-500px"});  
-    $("#tab4").stop().animate( {"left": "-550px"});
-    $("#tab5").stop().animate( {"left": "-600px"});
-    $("#tab6").stop().animate( {"left": "-150px"}, function() {
+    function animateCluesLeft(clue1,clue2,clue3,clue4,clue5){
+    $("#tab1").stop().animate( {"left": "-420px"}).delay(500).animate({"left": "-315px"}).html(clue1);  
+    $("#tab2").stop().animate( {"left": "-470px"}).delay(500).animate({"left": "-365px"}).html(clue2);
+    $("#tab3").stop().animate( {"left": "-520px"}).delay(500).animate({"left": "-415px"}).html(clue3);
+    $("#tab4").stop().animate( {"left": "-570px"}).delay(500).animate({"left": "-465px"}).html(clue4);
+    $("#tab5").stop().animate( {"left": "-620px"}).delay(500).animate({"left": "-515px"}).html(clue5);
+    $("#tab6").stop().animate( {"left": "-170px"}, function() {
     $("ul").css("z-index", "0");
     $("li p").css({
-        "font-size":"60%", 
+        "font-size":"50%", 
         "text-transform":"uppercase",
-        "padding": "15px 8px"
+        "padding": "15px 10px"
     });
   });
-}); //end "Ready!"" button click
+};
+
 
 }); //end document ready
-
-
-
-
 
 function play_multi_sound(s) {
         for (a=0;a<audiochannels.length;a++) {

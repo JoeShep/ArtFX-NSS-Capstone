@@ -14,6 +14,24 @@
    padding-left: 20px;
 
 }
+
+#sliderRow {
+  position:relative;
+}
+#instrux ul {
+  list-style: none;
+  position: absolute;
+  top: 85px;
+  right: 30px;
+  font-size: 90%;
+}
+
+.instruxWords {
+  font-weight: bold;
+  font-size: 160%;
+  background-color: rgba(221,176,25,0.5);
+  padding: 3px 8px;
+}
 #myModal .modal-body {
 	max-height: 725px;
 	text-align: center;
@@ -23,6 +41,7 @@
 	width: 850px; /* SET THE WIDTH OF THE MODAL */
 	margin: -75px 0 0 -425px; /* CHANGE MARGINS TO ACCOMODATE THE NEW WIDTH (original = margin: -250px 0 0 -280px;) */
       font-size: 150%;
+      
 
 }
 .modal-footer {
@@ -30,14 +49,21 @@
 
 }
 .modal-header {
-	background-image: url(../img/header2.jpg);
+    background-image: url(../img/header2.jpg);
+    color: white;
+    font-weight: lighter;
+/*    text-shadow:
+        -1px -1px 0 #ffffff,
+         1px -1px 0 #ffffff,
+        -1px  1px 0 #ffffff,
+         1px  1px 0 #ffffff;*/
 }
 h4 {
   font-size: 120%;
 }
 #logo {
     background-image: url(../img/Gogh-Starry-Night.jpg);
-    background-color: #000000;
+    background-color: #ffffffffffff;
     width: 725px;
     height: 275px;
     position: relative;
@@ -61,7 +87,7 @@ h4 {
  position: relative;
  }
 
- ul {
+ #clues {
     position: fixed;
     margin: 0;
     margin-top: 85px;
@@ -110,7 +136,7 @@ li p {
     padding-bottom: 15px;
     margin-left:-10px;
     margin-bottom: 8px;
-  background: rgba(47,135,250,0.4);
+  background: rgba(64,66,155,0.5);
   color:white;
   font-family:Arial;
   font-style:bold;
@@ -121,6 +147,9 @@ li p {
   border: 1px solid black;
 }
 
- /*area {
+ .main:hover {
   cursor: pointer;
- }*/
+ }
+ .footer {
+  font-size: 70%;
+ }
