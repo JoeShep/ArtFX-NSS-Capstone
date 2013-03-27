@@ -5,6 +5,7 @@
   position: relative;
   padding: 35px 0;
 }
+
 #content {
     background-color: white;
    -moz-box-shadow: inset 0 0 5px 5px #888;
@@ -12,17 +13,17 @@
    box-shadow: inset 0 0 5px 5px #888;
    padding-bottom: 35px;
    padding-left: 20px;
-
 }
 
 #sliderRow {
   position:relative;
 }
+
 #instrux ul {
   list-style: none;
   position: absolute;
   top: 85px;
-  right: 30px;
+  right: 27px;
   font-size: 90%;
 }
 
@@ -32,35 +33,33 @@
   background-color: rgba(221,176,25,0.5);
   padding: 3px 8px;
 }
+
 #myModal .modal-body {
 	max-height: 725px;
 	text-align: center;
 	background-image: url(../img/White2.gif);
 }
+
 #myModal {
 	width: 850px; /* SET THE WIDTH OF THE MODAL */
 	margin: -75px 0 0 -425px; /* CHANGE MARGINS TO ACCOMODATE THE NEW WIDTH (original = margin: -250px 0 0 -280px;) */
       font-size: 150%;
-      
-
 }
+
 .modal-footer {
 	background-image: url(../img/footer2.jpg);
-
 }
+
 .modal-header {
     background-image: url(../img/header2.jpg);
     color: white;
     font-weight: lighter;
-/*    text-shadow:
-        -1px -1px 0 #ffffff,
-         1px -1px 0 #ffffff,
-        -1px  1px 0 #ffffff,
-         1px  1px 0 #ffffff;*/
 }
+
 h4 {
   font-size: 120%;
 }
+
 #logo {
     background-image: url(../img/Gogh-Starry-Night.jpg);
     background-color: #ffffffffffff;
@@ -70,19 +69,20 @@ h4 {
     top: 10px;
     left: 25px;
   }
+
   .dwuserEasyRotator {
   	width: 600px; 
   	height: 500px; 
   	position: relative; 
   	top: 25px;
   	text-align: left;
-  	/*border: 5px solid black;*/
       margin-bottom: 30px;
-      margin-left: 15px;
+      margin-left: 25px;
       -moz-box-shadow: 0 0 5px 5px #888;
       -webkit-box-shadow: 0 0 5px 5px#888;
       box-shadow: 0 0 5px 5px #888;
   }
+
  .maps {
  position: relative;
  }
@@ -97,6 +97,7 @@ h4 {
     list-style: none;
     z-index:9999; 
 }
+
 #tab1 {
   width: 400px;
   position: relative;
@@ -136,23 +137,26 @@ li p {
     padding-bottom: 15px;
     margin-left:-10px;
     margin-bottom: 8px;
-  background: rgba(64,66,155,0.5);
-  color:white;
-  font-family:Arial;
-  font-style:bold;
-  text-align: right;
-  border-radius: 5px; 
+    background: rgba(64,66,155,0.5);
+    color:white;
+    font-family:Arial;
+    font-style:bold;
+    text-align: right;
+    border-radius: 5px; 
   -moz-border-radius: 5px; 
   -webkit-border-radius: 5px; 
-  border: 1px solid black;
+   border: 1px solid black;
 }
 
  .main:hover {
   cursor: pointer;
- }
+}
+
  .footer {
   font-size: 70%;
- }
- #checkbox {
+}
 
- }
+#checkbox {
+  margin-top: -5px;
+  margin-left: 8px;
+}
