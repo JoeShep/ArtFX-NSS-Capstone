@@ -121,9 +121,13 @@ $("#myModal").on("shown", function () {
   }); //end close modal click
 
  function addCheckbox(X) {
+  if($("#" + X).children('img')[0]) {
+      return;
+    } else {
     $("#" + X).append(
-      "<img id='checkbox' src='img/icon_checkbox.gif'>")
-  }
+      "<img id='checkbox' src='img/icon_checkbox.gif'>");
+   }
+  };
 
   function resetAnimation() {
     $(".tabs").stop().css({
