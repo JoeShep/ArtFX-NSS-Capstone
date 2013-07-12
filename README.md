@@ -2,7 +2,7 @@ ArtFX-NSS-Capstone
 ==================
 
 An interactive app for kids that encourages exploration of great paintings. This is my capstone project for the first semester of Nashville Software School, cohort 2.
-<p>See this code live at https://artfx-14my8.backliftapp.com/   Sound links are not functional at this time, because audio files are stored locally. </p>
+<p>Play with ArtFX at https://artfx-14my8.backliftapp.com/   Sound files are only mp3 at this time, so use a browser that is compatible, such as Chrome. </p>
 <p>For insight into the use of the images included in this project, please read the following article that explains how the "slavish" reproductions I am using are not bound by copyright: http://www.huffingtonpost.com/bernard-starr/museum-paintings-copyright_b_1867076.html</p>
 
 <html>
@@ -10,7 +10,7 @@ An interactive app for kids that encourages exploration of great paintings. This
 <ul>
   <li>Create and add ArtFX logo. DONE</li>
 	<li>Make logo fade in NOT STARTED</li>
-	<li>Create image maps of four paintings. IN PROGRESS
+	<li>Create image maps of four paintings. DONE
 		<ul>
 			<li>Initial image mapping done, but ideally will be remapped to make polygons cleaner for highlighting purposes. MOVE TO PHASE 2</li>
 			<li>Need to add one additional image map hotspot to two of the pics. DONE </li>
