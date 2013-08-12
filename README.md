@@ -6,10 +6,9 @@ An interactive app for kids that encourages exploration of great paintings. This
 <p>For insight into the use of the images included in this project, please read the following article that explains how the "slavish" reproductions I am using are not bound by copyright: http://www.huffingtonpost.com/bernard-starr/museum-paintings-copyright_b_1867076.html</p>
 
 <html>
-<h3>Phase one, to be completed by March 27, 2013: </h3>
+<h3>Phase one</h3>
 <ul>
   <li>Create and add ArtFX logo. DONE</li>
-	<li>Make logo fade in NOT STARTED</li>
 	<li>Create image maps of four paintings. DONE
 		<ul>
 			<li>Initial image mapping done, but ideally will be remapped to make polygons cleaner for highlighting purposes. MOVE TO PHASE 2</li>
@@ -37,7 +36,7 @@ An interactive app for kids that encourages exploration of great paintings. This
 	<li>Add voiceover files to augment or replace prompts and success messages</li>
 	<li>Sound File access/improvement
 	<ul>
-			<li>Sound files are currently in local folder. Need to migrate to a server for public functionality MOVE TO PHASE 2</li>
+			<li>Add alternate file formats for playback on all browsers</li>
 			<li>Need to tweak timing of some sounds to make longer or shorter</li>
 	</ul></li>
 </ul><br>
